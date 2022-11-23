@@ -157,7 +157,57 @@ public class TestingCase {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        driver.findElement(By.xpath("//table/tbody/tr[3]/td[8]/div/div[2]")).click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        for (int j = 0; j < 4; j++) {
+            driver.findElement(By.xpath("//button[contains(text(),'+')]")).click();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        driver.findElement(By.xpath("//button[contains(text(),'Set temperature')]")).click();
+        //String actualString = driver.findElement(By.xpath("//div[@class='ant-message-notice']")).getText();
+        //Assert.assertTrue(actualString.contains("Device temperature update successfully"));
+        try {
+            Thread.sleep(9000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //5th device in device list
+        driver.findElement(By.xpath("//table/tbody/tr[5]/td[8]/div/div[2]")).click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        for (int j = 0; j < 4; j++) {
+            driver.findElement(By.xpath("//button[contains(text(),'+')]")).click();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        driver.findElement(By.xpath("//button[contains(text(),'Set temperature')]")).click();
+        //String actualString = driver.findElement(By.xpath("//div[@class='ant-message-notice']")).getText();
+        //Assert.assertTrue(actualString.contains("Device temperature update successfully"));
+        try {
+            Thread.sleep(9000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+    
+    
 
 
 }
